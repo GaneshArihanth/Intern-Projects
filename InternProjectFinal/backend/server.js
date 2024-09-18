@@ -117,8 +117,6 @@ app.put('/users/update', verifyToken, async (req, res) => {
   query += fields.join(', ') + ' WHERE id = ?';
   values.push(userId);
 
-  console.log('Executing Query:', query, values); // Debug: Log the query
-
   db.query(query, values, (err, result) => {
     if (err) {
       console.error('Database error: ', err); // Debug: Log the error details
