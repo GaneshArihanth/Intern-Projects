@@ -42,7 +42,7 @@ const DeleteProfile = () => {
         />
         <br />
         <br />
-        <button type="submit">Delete Account</button>
+        <button id="delbutton" type="submit">Delete Account</button>
       </form>
     </div>
   );
