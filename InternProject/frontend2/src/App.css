@@ -1,6 +1,3 @@
-/* App.css */
-
-/* Main container for the app */
 .app-container {
     max-width: 800px;
     margin: 0 auto;
@@ -12,7 +9,6 @@
     position: relative;
 }
 
-/* Header styling */
 h1 {
     text-align: center;
     color: #004084;
@@ -20,14 +16,12 @@ h1 {
     margin: 20px 0;
 }
 
-/* UserProfile styling within the container */
 .user-profile {
     margin: 0 auto;
     max-width: 600px;
     padding: 20px;
 }
 
-/* Styling for the UserProfile component if needed */
 .user-profile h2 {
     text-align: center;
     color: #333;
@@ -41,7 +35,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Global styles for body */
 body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #e9ecef;

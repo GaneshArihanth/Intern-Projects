@@ -36,6 +36,7 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
+                <br></br>
                 <button type="submit">Login</button>
                 {message && <div className="message">{message}</div>}
             </form>

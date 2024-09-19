@@ -146,6 +146,29 @@ app.get('/users/profile', verifyToken, (req, res) => {
   });
 });
 
+// Delete user by email
+app.delete('/users/delete', (req, res) => {
+  const { email } = req.body;
+
+  // Check if email is provided
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  // Delete user from the database
+  const query = 'DELETE FROM users WHERE email = ?';
+  db.query(query, [email], (err, result) => {
+    if (err) return res.status(500).json({ error: 'Database error' });
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json({ message: 'User deleted successfully' });
+  });
+});
+
+
 // Verify JWT middleware
 function verifyToken(req, res, next) {
   const authHeader = req.headers['authorization'];

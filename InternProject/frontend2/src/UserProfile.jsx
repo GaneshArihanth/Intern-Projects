@@ -7,11 +7,9 @@ const UserProfile = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Function to fetch user profile
   const fetchUserProfile = async () => {
     try {
-      // Get the JWT token from localStorage or cookies
-      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI2Njc0NTk4fQ.ZN8b8i58t4n2yKbJaVKkP-ciUeK9qNLBhmxd3ScQSRw';
+      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzI2NzUwMDYxfQ.IR9eq4dblp2qANEphewfcu1UpwaV1natxZizBXYhr8Y';
 
       if (!token) {
         setError('No token found');
@@ -19,14 +17,12 @@ const UserProfile = () => {
         return;
       }
 
-      // Make a GET request to the /users/profile endpoint with the token
       const response = await axios.get('http://localhost:3000/users/profile', {
         headers: {
           authorization: token,
         }
       });
 
-      // Set the user profile data
       setUserProfile(response.data);
     } catch (err) {
       setError(err.response?.data?.error || 'An error occurred');

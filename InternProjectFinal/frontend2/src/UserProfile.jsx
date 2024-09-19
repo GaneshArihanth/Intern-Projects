@@ -11,7 +11,7 @@ const UserProfile = () => {
   const fetchUserProfile = async () => {
     try {
       // Get the JWT token from localStorage or cookies
-      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI2Njc0NTk4fQ.ZN8b8i58t4n2yKbJaVKkP-ciUeK9qNLBhmxd3ScQSRw';
+      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzI2Njk2ODA2fQ.RL5zmPE-hrtyP2JvwU9YrmhQSaYvQ-IAElAdoNGs9Tk';
 
       if (!token) {
         setError('No token found');

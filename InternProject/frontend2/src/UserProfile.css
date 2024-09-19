@@ -1,10 +1,7 @@
-/* UserProfile.css */
-
-/* Container for the user profile */
 .user-profile-container {
     max-width: 400px;
     margin: 40px auto;
-    padding: 50px 30px; /* Adjust padding for better fit */
+    padding: 50px 30px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     border-radius: 20px;
@@ -16,7 +13,6 @@
     transform: translateY(-2px);
 }
 
-/* Header styling */
 .user-profile-container h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -24,39 +20,43 @@
     color: #007bff;
 }
 
-/* Profile details styling */
 .user-profile-container p {
     margin: 10px 0;
     font-size: 1.1em;
     color: #333;
-    word-wrap: break-word; /* Break long words or text */
+    word-wrap: break-word;
 }
 
-/* Strong tags for labels */
 .user-profile-container p strong {
     color: #007bff;
 }
 
-/* Styling for loading and error messages */
 .loading,
 .error {
     font-size: 1.2em;
-    color: #ff4d4d; /* Red for errors */
+    color: #ff4d4d;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Success message styling */
 .success {
     font-size: 1.2em;
-    color: #28a745; /* Green for success */
+    color: #28a745;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Ensure the hashed password fits within the border */
 .user-profile-container .password {
-    font-family: monospace; /* Use monospace font for better readability */
-    white-space: pre-wrap; /* Preserve whitespace and wrap text */
-    word-wrap: break-word; /* Break long hashed password */
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dcdcdc;
 }
